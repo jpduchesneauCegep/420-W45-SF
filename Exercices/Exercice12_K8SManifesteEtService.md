@@ -78,6 +78,8 @@ Dans les exercices qui le permettent, assurez-vous de toujours indiquer un espac
     - ne spécifiez pas de port pour le node et ne créez donc pas de propriété nodePort
     - type : nodePort
     - matchLabels : voir exercice précédent
+
+- **Attention** faites des captures d'écran des étapes de la partie 3 et déposer celles-ci sur LÉA dans travaux.
 - À partir d'un pod qui a un shell, essayez la commande suivante :
 
 ```bash
