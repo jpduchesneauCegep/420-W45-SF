@@ -1,2 +1,2 @@
 # 420-W45-SF
-Théorie et exercice du cours installation de serveur et des services
+Théorie et exercices du cours installation des serveurs et des services
