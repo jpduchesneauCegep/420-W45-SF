@@ -94,7 +94,7 @@ Pour monter le partage sur le répertoire "/tmp/nfs" :
 mount 10.100.2.90:/srv/exports /tmp/nfs
 ```
 
-## Exercice 2 - Nginx
+## Exercice 1 - Nginx
 
 Le but est de créer un déploiement avec 3 replica d'une image nginx et de servir un fichier html de votre création.
 
