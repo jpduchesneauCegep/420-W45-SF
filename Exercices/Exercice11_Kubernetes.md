@@ -41,18 +41,18 @@ echo "source <(kubectl completion bash)" >> ~/.bashrc # ajoute l'auto-complétio
 
 - Créez votre namespaces avec la commande suivante : 
 ```
-$kubectl create namespace [matricule] 
+kubectl create namespace [matricule] 
 ```
 
 - Créez vous un contexte avec la commande 'kubectl config set-context', spécifiez un nom de namespace qui correspond à votre numéro de matricule, le cluster et l'utilisateur que vous venez de spécifier.
 
  ```
-$kubectl config set-contex [matricule] --cluster=kubernetes-distant --user=kubernetes-distant-admin
+kubectl config set-context [matricule] --cluster=kubernetes-distant --user=kubernetes-distant-admin
 ```
 
 - Définissez votre nouveau context comme étant le contexte courant (use-context)
 ```
-$kubectl config set-context [matricule] 
+kubectl config set-context [matricule] 
 ```
 - Affichez les noeuds et les pods du cluster (tous les namespaces) et de votre namespace pour valider que tout fonctionne
 
@@ -112,21 +112,21 @@ spec:
 Le Pod peut être créé avec la commande suivante:
 
 ```
-$ kubectl apply -f whoami.yaml
+kubectl apply -f whoami.yaml
 ```
 
 La commande suivante permet de lister les Pods présent:
 
 ```
-$ kubectl get pods
+kubectl get pods
 ```
 
 Note: il est aussi possible de précisez *pod* (au singulier) ou simplement *po*
 
 ```
-$ kubectl get pod
+kubectl get pod
 
-$ kubectl get po
+kubectl get po
 NAME      READY     STATUS    RESTARTS   AGE
 whoami    1/1       Running   0          22s
 ```
@@ -134,7 +134,7 @@ whoami    1/1       Running   0          22s
 Les details d'un Pod peuvent être obtenus avec la commande suivante:
 
 ```
-$ kubectl describe pod whoami
+kubectl describe pod whoami
 ```
 
 Note: les commandes suivantes peuvent également être utilisées:
@@ -150,7 +150,7 @@ Dans cette sortie, on peut voir la liste des containers du Pods et l'image utili
 Il est également possible d'obtenir la spécification du Pod avec la commande suivante dans laquelle on spécifie via *-o yaml* le format de sortie.
 
 ```
-$ kubectl get po/whoami -o yaml
+kubectl get po/whoami -o yaml
 
   startTime: "2020-05-18T14:21:03Z"
 ```
@@ -159,13 +159,13 @@ $ kubectl get po/whoami -o yaml
 Depuis un premier terminal lancez la commande suivante:
 
 ```
-$ kubectl port-forward whoami 8888:80
+kubectl port-forward whoami 8888:80
 ```
 
 Depuis un second terminal, vérifiez que l'application est accessible sur localhost depuis le port 8888:
 
 ```
-$ curl localhost:8888
+curl localhost:8888
 Hostname: whoami
 IP: 127.0.0.1
 IP: 192.168.33.3
@@ -181,7 +181,7 @@ Accept: */*
 Le Pod peut etre supprimé avec la commande suivante:
 
 ```
-$ kubectl delete po/whoami
+kubectl delete po/whoami
 ```
 </details>
 
