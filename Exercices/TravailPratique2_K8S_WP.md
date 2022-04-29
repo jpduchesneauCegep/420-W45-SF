@@ -4,13 +4,13 @@ Le but de se laboratoire est de monter un site Wordpress avec MySQL dans Kuberne
 
 Le laboratoire s'effectue en groupe de 2. Vous devez créer vos objets dans un espace de nom qui contient la liste de vos matricules séparés par un tiret. Exemple "Tp2-1234567-2134567".
 
-Le temps alloué est de 3 séances (29 avril, 2 mai et 6 mai). La remise est pour le 11 mai 2022 minuit.
+Le temps alloué est de 3 séances (29 avril, 2 mai et 6 mai). La date de la remise ai indiqué sur LÉA.
 
-Vous devez fournir :
+Vous devez fournir (déposé sur LÉA) :
 
 - Tous les fichiers YAML
 - Un dessin qui illustre les noeuds, les services et les pods ainsi que leurs relations
-- Une vidéo d'environ 10 mins (maximum 15 mins) :
+- Une vidéo d'environ 10 min. (maximum 15 min.), lien ou source:
   - Explication de tous vos fichiers
   - Démonstration que le site fonctionne
   - Démonstration que vous êtes capable de faire une mise à l'échelle
@@ -36,6 +36,14 @@ Références à lire :
 - https://hub.docker.com/_/wordpress
 - https://hub.docker.com/_/mysql
 - Outils d'enregistrement : OBS, Screencast-o-matic, etc.
+
+
+## Consignes :
+- Ce travail pratique vaut pour 20 % de la note finale
+- Ce travail est réalisé en équipe de 2 membres et seuls les membres de cette équipe y contribuent
+- Tout le matériel est autorisé 
+- Toute copie de code, de portion de code, d’algorithme ou de texte doit faire mention de sa source
+- Tout constat de plagiat, tricherie ou fraude sera automatiquement déclaré à la Direction et les sanctions prévues seront appliquées.
 
 ## Évaluation :
 |Item |Points  |
