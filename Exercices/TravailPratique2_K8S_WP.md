@@ -2,7 +2,7 @@
 
 Le but de se laboratoire est de monter un site Wordpress avec MySQL dans Kubernetes. Wordpress doit avoir 3 replica.
 
-Le laboratoire s'effectue en groupe de 2. Vous devez créer vos objets dans un espace de nom qui contient la liste de vos matricules séparés par un tiret. Exemple "1234567-2134567".
+Le laboratoire s'effectue en groupe de 2. Vous devez créer vos objets dans un espace de nom qui contient la liste de vos matricules séparés par un tiret. Exemple "Tp2-1234567-2134567".
 
 Le temps alloué est de 3 séances (29 avril, 2 mai et 6 mai). La remise est pour le 11 mai 2022 minuit.
 
