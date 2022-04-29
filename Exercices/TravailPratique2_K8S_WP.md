@@ -37,3 +37,17 @@ Références à lire :
 - https://hub.docker.com/_/mysql
 - Outils d'enregistrement : OBS, Screencast-o-matic, etc.
 
+## Évaluation :
+|Item |Points  |
+--- | --- | 
+|Deployment / pod Wordpress|10|
+|Service Wordpress|5|
+|Deployment / pod MySQL|10|
+|Volume MySQL|10|
+|Service MySQL|5|
+|Service MySQL - CusterIP|5|
+|Site fonctionnel|30
+|Mise à l'échelle|5
+|Explication fichiers|10
+|Diagramme|10|
+|Total|100
