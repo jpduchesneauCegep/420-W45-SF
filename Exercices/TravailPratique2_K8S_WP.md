@@ -4,7 +4,7 @@ Le but de se laboratoire est de monter un site Wordpress avec MySQL dans Kuberne
 
 Le laboratoire s'effectue en groupe de 2. Vous devez créer vos objets dans un espace de nom qui contient la liste de vos matricules séparés par un tiret. Exemple "Tp2-1234567-2134567".
 
-Le temps alloué est de 3 séances (29 avril, 2 mai et 6 mai). La date de la remise ai indiqué sur LÉA.
+Le temps alloué est de 3 séances (29 avril, 2 mai et 6 mai). La date de la remise est indiqué sur LÉA.
 
 Vous devez fournir (déposé sur LÉA) :
 
