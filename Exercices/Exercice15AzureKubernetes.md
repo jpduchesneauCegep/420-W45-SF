@@ -28,7 +28,7 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
 ![Azure CLI](img/AzureCli.png)
 
-#### Définissez votre abonnement
+### Définissez votre abonnement
 
 ```bash
 az login
@@ -78,7 +78,7 @@ az ad group show
 ![Az show group](img/listgroup.png)
 
 
-## Création d'un groupe de ressouces pour K8S
+### Création d'un groupe de ressouces pour K8S
 
 **Attention**, seulement pour les personnes qui utilisent leur propre compte Azure. Les autres, vous utiliserais celui fournis par le professeur car vous  n'avez pas le pouvoir de créer vos groupe de ressources.
 
@@ -94,7 +94,7 @@ az storage account create --resource-group MyResourceGroup --name storage134 --l
 
 Il existe également un plug-in Visual Studio Code qui propose une expérience interactive, comprenant l’autocomplétion et le survol de la documentation.
 
-## Vérifier 
+### Vérifier 
 
 Vérifiez que Microsoft.OperationsManagement et Microsoft.OperationalInsights sont enregistrés sur votre abonnement. Pour vérifier l'état de l'enregistrement :
 
@@ -133,7 +133,7 @@ Remarque
 Lorsque vous créez un cluster AKS, un deuxième groupe de ressources est automatiquement créé pour stocker les ressources AKS. Pour plus d'informations, voir Pourquoi deux groupes de ressources sont-ils créés avec AKS ?
 https://docs.microsoft.com/en-us/azure/aks/faq#why-are-two-resource-groups-created-with-aks
 
-# Installez le CLI de Kubernetes
+## Installez le CLI de Kubernetes
 
 Si vous utilisez Azure Cloud Shell, kubectl est déjà installé. Vous pouvez également l'installer localement à l'aide de la commande az aks install-cli :
 
@@ -199,7 +199,7 @@ az aks scale \
 
 
 
-## Remise
+# Remise
 - Faite une capture d'écran de la commande *kubectl get nodes* et déposer celle-ci sur LÉA comme preuve de réalisation de l'exercice.
 
 ![Kubectl get nodes](img/remise.jpg)
