@@ -26,7 +26,7 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
 ### Démarrez avec Azure CLI
 
-![Azure CLI](img/azurecli.png)
+![Azure CLI](img/AzureCli.png)
 
 #### Définissez votre abonnement
 
@@ -60,14 +60,14 @@ az account show # Voir sur quel abonnement je suis
 ```
 Exemple de sortie pour az account show :
 
-![Az account show](img/azshow.png)
+![Az account show](img/azShow.png)
 
 ```bash
 az account show # Voir sur quel abonnement je suis
 az account list # Lister mes abonnement
 az account set  -s "DFC_dev" # Sélectionner un abonnement
 ```
-![Az account show](img/azsetAccount.png)
+![Az account show](img/azSetAccount.png)
 
 Pour vérifier les groupes de ressource :
 
@@ -87,7 +87,7 @@ az group create --name 420-W45-SF-4392-Ex12-Matricule --location eastus
 ```
 Bien sur, changer le mot matricule par le votre.
 
-![Az create group](img/azcreategroup.png)
+![Az create group](img/AzCreateGroup.png)
 
 Création d'un unité de stockage 
 az storage account create --resource-group MyResourceGroup --name storage134 --location eastus --sku Standard_LRS
