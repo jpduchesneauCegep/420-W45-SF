@@ -237,16 +237,6 @@ az aks start --name myAKSCluster --resource-group myResourceGroup
 <hr>
 
 
-
-## Ménage sur Azure après l'exercice
-
-N'oubliez pas de suprimmer votre groupe de ressource pour éviter que le compteur tourne.
-```bash
-az group delete -n [nomduGroupe]
-## Exemple :
-az group delete --yes --no-wait -n DFC-A20-420-W47-SF-10054-3
-```
-
 ## Capture depuis l'interface Web de l'état du cluster
 
 Avant l'arrêt :
@@ -260,4 +250,5 @@ Après arrêt :
 - AKL :
 
     https://ubuntu.com/tutorials/install-a-local-kubernetes-with-microk8s?&_ga=2.77536341.1398588099.1651518788-225111492.1649513457&_gac=1.187168346.1651258531.Cj0KCQjwma6TBhDIARIsAOKuANwIY5p5S9YmtP6v_DlmiFLT-S_l-T2RzLwomWr86ylvziTo34caLikaAkt2EALw_wcB#5-host-your-first-service-in-kubernetes
+
 
