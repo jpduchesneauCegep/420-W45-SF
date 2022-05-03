@@ -26,7 +26,7 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
 ### Démarrez avec Azure CLI
 
-![Azure CLI](img/azurecli.png)
+![Azure CLI](img/Azurecli.png)
 
 #### Définissez votre abonnement
 
