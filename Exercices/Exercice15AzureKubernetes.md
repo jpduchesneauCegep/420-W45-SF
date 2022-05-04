@@ -63,7 +63,7 @@ Exemple de sortie pour az account show :
 ![Az account show](img/azShow.png)
 
 ```bash
-az account show # Voir sur quel abonnement je suis
+az account showa # Voir sur quel abonnement je suis
 az account list # Lister mes abonnement
 az account set  -s "DFC_dev" # Sélectionner un abonnement
 ```
@@ -72,7 +72,7 @@ az account set  -s "DFC_dev" # Sélectionner un abonnement
 Pour vérifier les groupes de ressource :
 
 ```bash
-az ad group show
+az group list --output table
 
 ```
 ![Az show group](img/listgroup.png)
