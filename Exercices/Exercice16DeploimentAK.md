@@ -2,13 +2,6 @@
 
 Dans cet exercice, nous allons déploiyer une application sur notre cluster AKS.
 
-## Consignes:
-
-Remplacer les informations suivante par ceux que vous avez utilisé à l'exercice 15: 
-
-- myResourceGroup {Vote groupe de ressource}
-- name {Le nom de votre cluster}
-
 
 ## Etape 1 : Préparer une application pour Azure Kubernetes Service (AKS)
 
@@ -84,17 +77,16 @@ docker-compose up -d
 ```
 Une fois terminé, utilisez la commande docker images pour voir les images créées. Trois images ont été téléchargées ou créées. L'image azure-vote-front contient l'application frontale et utilise l'image nginx-flask comme base. L'image redis est utilisée pour démarrer une instance Redis.
 ```bashd
-images docker
+docker images
 ```
 
-![Faire une capture ici](img/)
+![docker images](img/ex16images.jpg)
 
 Exécutez la commande docker ps pour voir les conteneurs en cours d'exécution :
 
 ```bash
 docker ps
 ```
-
 
 ### Tester l'application localement
 
@@ -128,10 +120,11 @@ Créez une instance d'Azure Container Registry avec la commande **az acr create*
 
 ```bash
 az acr create \
+    --name ext16k8s # J'ai utlisé un nom pour le registry faisant référence à l'exercice
     --resource-group myResourceGroup \
-    --name <acrName> \ # Donez un nom unique à votre registre
     --sku Basic
 ```
+
 ### Connectez-vous au registre des conteneurs
 
 Pour utiliser l'instance ACR, vous devez d'abord vous connecter. Utilisez la commande az acr login et fournissez le nom unique donné au registre de conteneurs à l'étape précédente.
@@ -147,7 +140,7 @@ docker images
 ```
 La sortie de la commande ci-dessus montre la liste de vos images locales actuelles :
 
-![Faire une capture ici](img/)
+![Liste des images docker](img/exdockerImages.jpg)
 
 Pour utiliser l'image de conteneur azure-vote-front avec ACR, l'image doit être marquée avec l'adresse du serveur de connexion de votre registre. Cette étiquette est utilisée pour le routage lors de la transmission d'images de conteneur à un registre d'images.
 
@@ -164,12 +157,9 @@ docker tag mcr.microsoft.com/azuredocs/azure-vote-front:v1 <acrLoginServer>/azur
 ```
 Pour vérifier que les balises sont appliquées, exécutez à nouveau les images docker.
 
-```
-images docker
-```
 Une image est étiquetée avec l'adresse de l'instance ACR et un numéro de version.
 
-![Faire une capture ici](img/)
+![Image Tager](img/ex16dockerImages.jpg)
 
 ### Pousser les images vers le registre
 
@@ -192,7 +182,7 @@ L'exemple de sortie suivant répertorie l'image azure-vote-front comme disponibl
 
 
 ```
-Résultat
+Result
 ----------------
 azure-vote-front
 
@@ -205,7 +195,7 @@ az acr repository show-tags --name <acrName> --repository azure-vote-front --out
 
 L'exemple de sortie suivant montre l'image v1 étiquetée à l'étape précédente :
 ```
-Résultat
+Result
 --------
 v1
 ```
@@ -235,19 +225,86 @@ Dans ces tutoriels, une instance Azure Container Registry (ACR) stocke l'image d
 
 ```bash
 az acr list --resource-group myResourceGroup --query "[].{acrLoginServer:loginServer}" --output table
+```
+Vous avez récupéré cette information un peu plus haut.
 
-# Mon cluster 
-az acr list --resource-group 420-W45-SF-4392-Ex12-Matricule --query "[].{acrLoginServer:loginServer}" --output table
+L'exemple de fichier manifeste du repo git cloné dans le premier tutoriel utilise les images de Microsoft Container Registry (mcr.microsoft.com). Assurez-vous que vous êtes dans le répertoire cloné azure-voting-app-redis, puis ouvrez le fichier manifeste avec un éditeur de texte, tel que vi :
+
+
+```bash
+vi azure-vote-all-in-one-redis.yaml
 ```
 
+Remplacez mcr.microsoft.com par le nom de votre serveur de connexion ACR. Le nom de l'image se trouve à la ligne 60 du fichier manifeste. L'exemple suivant montre le nom d'image par défaut :
+
+```yaml
+containers:
+- name: azure-vote-front
+  image: mcr.microsoft.com/azuredocs/azure-vote-front:v1
+```
+Fournissez votre propre nom de serveur de connexion ACR afin que votre fichier manifeste ressemble à l'exemple suivant :
+
+```yaml
+containers:
+- name: azure-vote-front
+  image: <acrName>.azurecr.io/azure-vote-front:v1
+```
+
+Enregistrez et fermez le fichier. Dans vi, utilisez :wq.
+
+### Déployer l'application
+
+Pour déployer votre application, utilisez la commande kubectl apply. Cette commande analyse le fichier manifeste et crée les objets Kubernetes définis. Spécifiez l'exemple de fichier manifeste, comme indiqué dans l'exemple suivant :
+
+```bash
+kubectl apply -f azure-vote-all-in-one-redis.yaml
+```
+L'exemple de sortie suivant montre les ressources créées avec succès dans le cluster AKS :
+
+```
+$ kubectl apply -f azure-vote-all-in-one-redis.yaml
+
+deployment "azure-vote-back" created
+service "azure-vote-back" created
+deployment "azure-vote-front" created
+service "azure-vote-front" created
+```
+
+### Tester l'application 
+Lorsque l'application s'exécute, un service Kubernetes expose le frontal de l'application à Internet. Ce processus peut prendre quelques minutes pour se terminer.
+
+Pour surveiller la progression, utilisez la commande kubectl get service avec l'argument --watch.
+
+```
+kubectl get service azure-vote-front --watch
+```
+Initialement, l'EXTERNAL-IP pour le service azure-vote-front est affiché comme étant en attente (pending):
+
+```
+azure-vote-front   LoadBalancer   10.0.34.242   <pending>     80:30676/TCP   5s
+```
+Lorsque l'adresse EXTERNAL-IP passe d'une adresse en attente à une adresse IP publique réelle, utilisez CTRL-C pour arrêter le processus de surveillance kubectl. L'exemple de sortie suivant montre une adresse IP publique valide attribuée au service :
+
+```
+azure-vote-front   LoadBalancer   10.0.34.242   52.179.23.131   80:30676/TCP   67s
+```
+Faite une capture pour la remise
+
+Pour voir l'application en action, ouvrez un navigateur web sur l'adresse IP externe de votre service :
+
+![azure vote](img/azure-vote.png)
+
+Faite une capture pour la remise
+
+Si l'application ne s'est pas chargée, cela peut être dû à un problème d'autorisation avec votre registre d'images. Pour afficher l'état de vos conteneurs, utilisez la commande kubectl get pods. Si les images de conteneurs ne peuvent pas être tirées, consultez la section Authentification avec le registre de conteneurs Azure à partir du service Azure Kubernetes.
 
 
 
 # Remise
-- Faite une capture d'écran de la commande *kubectl get nodes* et déposer celle-ci sur LÉA comme preuve de réalisation de l'exercice.
 
-![Kubectl get nodes](img/remise.jpg)
+Déposer les deux images capturé dans un seule fichier que vous déposer sur LÉA comme preuve de réalisation de l'exercice.
 
+Conserver v
 ## Arrêter et démarrer un cluster Azure Kubernetes Service (AKS)
 
 
@@ -276,9 +333,7 @@ Vous pouvez vérifier que votre cluster est arrêté en utilisant la commande az
 <hr>
 
 
-
-
 ## Source :
-- Tutoriel :  https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-deploy-application?tabs=azure-cli
+- Tutoriel :  https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-app
 
 
