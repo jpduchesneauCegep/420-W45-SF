@@ -1,4 +1,4 @@
-# Exercice 16 - Azure Kubernetes
+# Exercice 16 - Déploiyer une application sur AKS
 
 Dans cet exercice, nous allons déploiyer une application sur notre cluster AKS.
 
