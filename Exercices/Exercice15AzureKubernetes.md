@@ -63,7 +63,7 @@ Exemple de sortie pour az account show :
 ![Az account show](img/azShow.png)
 
 ```bash
-az account showa # Voir sur quel abonnement je suis
+az account show # Voir sur quel abonnement je suis
 az account list # Lister mes abonnement
 az account set  -s "DFC_dev" # Sélectionner un abonnement
 ```
