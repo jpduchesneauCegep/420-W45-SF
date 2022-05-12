@@ -82,7 +82,7 @@ kubectl delete deployment nginx
 - Validez que le pod est bien créé en visualisant le pod et le déploiement
 - Créez de nouveau réplica de votre pod en tapant la commande suivante : ```kubectl scale deployment --replicas 2 mon-nginx```
 - Listez les pods et validez que vous en avez bien 2 maintenant
-- Viréfier les services (kubectl get service), vous devrier avoir un service de type LoadBalancer avec le port 80
+- Vérifier les services (kubectl get service), vous devrier avoir un service de type LoadBalancer avec le port 80
 - Prenez un capture d'écran pour la déposer sur LÉA pour l'exercice 
 - Exposez vos pods sur votre hôte local avec la commande suivante : ```kubectl expose deployments mon-nginx --port=80 --type=LoadBalancer```
 - Testez votre site
