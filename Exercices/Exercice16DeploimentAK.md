@@ -206,6 +206,12 @@ Vous avez maintenant une image de conteneur qui est stockée dans une instance p
 
 Cette étape à été fait dans l'exercice 15.
 
+Par contre, vous devez faire la commande suivante pour intégrer votre ACR au cluster :
+
+```bash
+az aks update -n myAKSCluster -g myResourceGroup --attach-acr <acr-name>
+```
+
 ## Etape 4 : Run applications in Azure Kubernetes Service (AKS)
 Dans ce tutoriel, quatrième partie sur sept, un exemple d'application est déployé dans un cluster Kubernetes. Vous apprenez à :
 
