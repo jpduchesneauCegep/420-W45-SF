@@ -5,9 +5,9 @@ Dans cet exercice, nous allons installer Ansible sur votre machine virtuelle.
 
 Voici ce qu'en dit la documentation sur Ansible :
 
-Ansible est un outil d'automatisation informatique. Il permet de configurer des systèmes, de déployer des logiciels et d'orchestrer des tâches informatiques plus avancées, telles que des déploiements continus ou des mises à jour permanentes sans temps d'arrêt.
+"Ansible est un outil d'automatisation informatique. Il permet de configurer des systèmes, de déployer des logiciels et d'orchestrer des tâches informatiques plus avancées, telles que des déploiements continus ou des mises à jour permanentes sans temps d'arrêt."
 
-Les principaux objectifs d'Ansible sont la simplicité et la facilité d'utilisation. Il met également l'accent sur la sécurité et la fiabilité, avec un minimum de pièces mobiles, l'utilisation d'OpenSSH pour le transport (avec d'autres transports et modes d'extraction comme alternatives), et un langage qui est conçu autour de l'auditabilité par les humains - même ceux qui ne sont pas familiers avec le programme.
+"Les principaux objectifs d'Ansible sont la simplicité et la facilité d'utilisation. Il met également l'accent sur la sécurité et la fiabilité, avec un minimum de pièces mobiles, l'utilisation d'OpenSSH pour le transport (avec d'autres transports et modes d'extraction comme alternatives), et un langage qui est conçu autour de l'auditabilité par les humains - même ceux qui ne sont pas familiers avec le programme."
 
 ## Environnement de travail 
 
@@ -231,7 +231,7 @@ ansible -m ping Web
 
 Si la communication se passe bien, vous devriez obtenir le message suivant :
 
-![images](img/AnsibleCmd1.png)
+![images](img/Ansiblecmd1.png)
 
 Testons l'ensemble de l'inventaire (All) et pas seulement le groupe Web et ce avec un commande id, module command argument -a id :
 ```
@@ -239,7 +239,7 @@ ansible -m command -a id all
 ```
 qui vas nous renvoyer les informations suivantes :
 
-![images](img/AnsibleCmd2.png)
+![images](img/Ansiblecmd2.png)
 
 ## Défis et remise: 
 
