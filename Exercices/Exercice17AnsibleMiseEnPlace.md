@@ -186,7 +186,7 @@ Dans la suite de l’exercice, les connexions SSH se feront avec l’utilisateur
 Par la suite, la machine rec-apache-1 sera administrée par clé SSH et vous disposerez du mot de passe de l’utilisateur root. Par conséquent, l’échange de clé se fera avec l’outil ssh-copy-id suivi du nom de la machine. Cet outil a pour fonction de prendre la clé publique SSH pour la déposer automatiquement sur la machine distante dans le fichier ~/.ssh/authorized_keys.
 Il est également possible de faire précéder le nom de l’utilisateur avec lequel se connecter en utilisant une arobase (‘@’). Ci-dessous un exemple d’échange de clé avec l’utilisateur de la machine rec-apache-1 :
 
-![Image](img/CopySshKey.png)
+![Image](img/CopySshKey.PNG)
 
 
 La clé est maintenant en place. Comme le message vous y invite, il est maintenant possible de se connecter avec la commande ssh deploy@srv-apache-1 pour s’assurer que l’échange de clé s’est bien passé :
