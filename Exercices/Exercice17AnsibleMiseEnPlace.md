@@ -5,8 +5,9 @@ Dans cet exercice, nous allons installer Ansible sur votre machine virtuelle.
 
 Voici ce qu'en dit la documentation sur Ansible :
 
-    Ansible est un outil d'automatisation informatique. Il permet de configurer des systèmes, de déployer des logiciels et d'orchestrer des tâches informatiques plus avancées, telles que des déploiements continus ou des mises à jour permanentes sans temps d'arrêt.
-    Les principaux objectifs d'Ansible sont la simplicité et la facilité d'utilisation. Il met également l'accent sur la sécurité et la fiabilité, avec un minimum de pièces mobiles, l'utilisation d'OpenSSH pour le transport (avec d'autres transports et modes d'extraction comme alternatives), et un langage qui est conçu autour de l'auditabilité par les humains - même ceux qui ne sont pas familiers avec le programme.
+Ansible est un outil d'automatisation informatique. Il permet de configurer des systèmes, de déployer des logiciels et d'orchestrer des tâches informatiques plus avancées, telles que des déploiements continus ou des mises à jour permanentes sans temps d'arrêt.
+
+Les principaux objectifs d'Ansible sont la simplicité et la facilité d'utilisation. Il met également l'accent sur la sécurité et la fiabilité, avec un minimum de pièces mobiles, l'utilisation d'OpenSSH pour le transport (avec d'autres transports et modes d'extraction comme alternatives), et un langage qui est conçu autour de l'auditabilité par les humains - même ceux qui ne sont pas familiers avec le programme.
 
 ## Environnement de travail 
 
@@ -26,7 +27,7 @@ Même s’il est possible de passer par des mots de passe pour se connecter aux 
 
 Les connexions SSH se feront avec l’utilisateur *deploy*. Il faut donc créer cet utilisateur sur la station de gestion, créer sa clé et échanger la clé sur les noeuds que nous voulons gérer, dans notre cas srv-apache-matricule
 
-    Il est important d'utiliser un usager différent de votre usager de travail habituelle. Ce nouvelle usager doit pouvoir avoir les droits sudo pour exécuté les commandes sur la machine de contrôle mais il devra également exister sur chacun des noeuds gérés.
+Il est important d'utiliser un usager différent de votre usager de travail habituelle. Ce nouvelle usager doit pouvoir avoir les droits sudo pour exécuté les commandes sur la machine de contrôle mais il devra également exister sur chacun des noeuds gérés.
 
 
 ```bash
