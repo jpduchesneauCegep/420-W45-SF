@@ -231,7 +231,7 @@ ansible -m ping Web
 
 Si la communication se passe bien, vous devriez obtenir le message suivant :
 
-![images](img/Ansiblecmd1.png)
+![images](img/Ansiblecmd1.PNG)
 
 Testons l'ensemble de l'inventaire (All) et pas seulement le groupe Web et ce avec un commande id, module command argument -a id :
 ```
@@ -239,7 +239,7 @@ ansible -m command -a id all
 ```
 qui vas nous renvoyer les informations suivantes :
 
-![images](img/Ansiblecmd2.png)
+![images](img/Ansiblecmd2.PNG)
 
 ## Défis et remise: 
 
