@@ -97,7 +97,7 @@ L’installation d’Ansible peut se faire de plusieurs manières
 
 Nous allons opter pour les packages système : 
 ```bash
-sudo apt intall ansible
+sudo apt install ansible
 ```
 Vérification de la version d’Ansible
 
