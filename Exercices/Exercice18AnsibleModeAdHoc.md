@@ -210,6 +210,28 @@ Voici de nouveau la sortie sans avertissement et avec bien sûr, les changed : f
 
 **Attention : gardez une capture pour votre remise.**
 
+
+# Ansible  - Mode ad hoc avec format YAML
+
+Dans cette partie de l'exercice, nous allons utiliser Ansible sur des machines distantes en mode ad hoc mais cette fois, avec un inventaire au format YAML.
+
+ 
+## Sur votre machine avec de contrôle 
+
+A l'aide de l'éditeur de votre choix, reproduire le fichier d'inventaire en format YAML.
+Vous pouvez vous aidez avec la [documentation](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html).
+
+```
+cat inventaire
+```
+Maintenant, nous pouvons faire les commandes ad hoc:
+
+```bash
+ansible -i invnetaire.yaml all -m ping
+```
+**Attention : gardez une capture comme preuve de réalisation.**
+
+
 # Le module setup
 
 Il scan la machine pour vous donnez l'ensemble des informations à exploiter dans les playbook que nous utiliserons dans le prochain exercice.
@@ -243,13 +265,17 @@ Remarquer les points suivants pour chacune des machines :
     - Mémoire vive 
     - etc.
 
+
+
 # Remise
 
-Capture de la commande :
+Placer les capture des deux  commandes suivante dans un seul fichier et déposer le sur LÉA dans travaux exercice 18.
 
 ```bash
 ansible -i inventaire all -m copy -a "dest=/home/deploy/totot.txt content='Exercice Ansible ad hoc v3'"
 ```
 
-
+```bash
+ansible -i invnetaire.yaml all -m ping
+```
 
