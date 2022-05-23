@@ -1,5 +1,7 @@
 # Exercice 17 - Ansible  - Installation et configuration de base
 
+- Environnement : vSphere
+- Temps de réalisation : 2 heures
 
 Dans cet exercice, nous allons installer Ansible sur votre machine virtuelle.
 

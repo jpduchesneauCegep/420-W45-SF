@@ -1,5 +1,8 @@
 # Exercice 18 - Ansible  - Mode ad hoc
 
+- Environnement : vSphere
+- Temps de réalisation : 2 heures
+
 Dans cet exercice, nous allons utiliser Ansible sur des machines distantes en mode ad hoc.
 Le mode ad hoc est en général utilisé dans ces situations :
 - Test de module
@@ -151,6 +154,7 @@ DFC DS -> VM DFC -> Modeles -> Production -> TPL_20210520_CentOsStream9
 ## Machine de contrôle 
 
 - Dans votre machine de contrôle, ajouter à votre fichier /etc/hosts l'adresse ip et le nom de votre srv-mysql-1.
+- Copier la clé ssh sur la machine srv-mysql-[matricule] (Voir exercice 17)
 - Faite un ping sur le nom pour vérifier qu'il n'y ai pas d'erreur :
 ```
 ping srv-mysql-1
