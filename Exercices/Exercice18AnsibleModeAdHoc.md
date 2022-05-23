@@ -147,8 +147,8 @@ DFC DS -> VM DFC -> Modeles -> Production -> TPL_20210520_CentOsStream9
 ```bash
  sudo adduser deploy 
  sudo usermod -aG adm  deploy
- su deploy # se connecter avec deploy
- passwd # changer le mot de passe
+ passwd deploy # changer le mot de passe
+ su deploy
 ```
 
 ## Machine de contrôle 
@@ -231,7 +231,7 @@ cat inventaire
 Maintenant, nous pouvons faire les commandes ad hoc:
 
 ```bash
-ansible -i invnetaire.yaml all -m ping
+ansible -i inventaire.yaml all -m ping
 ```
 **Attention : gardez une capture comme preuve de réalisation.**
 
@@ -280,6 +280,6 @@ ansible -i inventaire all -m copy -a "dest=/home/deploy/totot.txt content='Exerc
 ```
 
 ```bash
-ansible -i invnetaire.yaml all -m ping
+ansible -i inventaire.yaml all -m ping
 ```
 
