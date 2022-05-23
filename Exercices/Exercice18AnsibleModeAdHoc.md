@@ -145,6 +145,7 @@ DFC DS -> VM DFC -> Modeles -> Production -> TPL_20210520_CentOsStream9
  sudo adduser deploy 
  sudo usermod -aG adm  deploy
  passwd deploy # changer le mot de passe
+ su deploy
 ```
 
 ## Machine de contrôle 
