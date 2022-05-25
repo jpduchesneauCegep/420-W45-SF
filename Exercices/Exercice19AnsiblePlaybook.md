@@ -289,9 +289,9 @@ git push
 
 # Remise
 
-Placer des captures des commandes suivantes dans un seul fichier et déposer le sur LÉA dans travaux exercice 19. 
+Placer des captures des commandes suivantes et de la page du navigateur dans un seul fichier et déposer le sur LÉA dans travaux exercice 19. 
 
->[!Astuce] Utiser un terminal pour les deux commande cat et un autres pour l'éxécution de playbook et ce, côte à côte.
+>[!Astuce] Utiser un terminal pour les deux commande cat et un autres pour l'éxécution de playbook et ce, côte à côte avec le navigateur en haut.
 
 ```bash
 cat hosts.yaml
