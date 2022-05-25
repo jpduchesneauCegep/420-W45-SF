@@ -37,7 +37,7 @@ git init
 git add *
 git commit -m "Intialisation de mon dépôt"
 ```
-Avec votre navigateur, créez le projet sur Github.com, en ne mettant PAS de Readme. Il vaut mieux l’ajouter après, une fois que les fichiers ont été uploader, pour éviter tout conflit.
+Avec votre navigateur, créez le projet privé sur Github.com, en ne mettant PAS de Readme. Il vaut mieux l’ajouter après, une fois que les fichiers ont été uploader, pour éviter tout conflit. Ajouter le professeurs comme membre du projet.
 Par la suite, faite les commandes suivante pour synchronizer les deux dépôts :
 ```bash
 git remote add origin git@github.com:[votrecompte git hub]/webapp-assible-apache.git
@@ -277,6 +277,15 @@ ansible-playbook -i hosts.yaml deploy.yaml
 
 Le mot de passe est demandé.
 
+## 9- Synchroniser votre projet avec GitHub
+
+```bash
+git pull
+git status
+git add *
+git commit -am "Update"
+git push
+```
 
 # Remise
 
