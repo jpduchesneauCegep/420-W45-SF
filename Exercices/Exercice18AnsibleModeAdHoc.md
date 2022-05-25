@@ -258,7 +258,7 @@ Astuce, vous avez probablement remarqué que votre usager deploy ne peut pas uti
   - Faite une copie du fichier setup vers votre usager :
 
 ```
-sudo cp setup.txt /homme/[votreUsager]/setup.txt
+sudo cp setup.txt /home/[votreUsager]/setup.txt
 ```
 Remarquer les points suivants pour chacune des machines :
  - Adresse IP v4 et v6
