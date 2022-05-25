@@ -36,17 +36,13 @@ git config --global user.user "Votre nom" #si pas déjà définit.
 git init
 git add *
 git commit -m "Intialisation de mon dépôt"
-# Créez le projet sur Github.com avec votre navigateur
+```
+Avec votre navigateur, créez le projet sur Github.com, en ne mettant PAS de Readme. Il vaut mieux l’ajouter après, une fois que les fichiers ont été uploader, pour éviter tout conflit.
+Par la suite, faite les commandes suivante pour synchronizer les deux dépôts :
+```bash
 git remote add origin git@github.com:[votrecompte git hub]/webapp-assible-apache.git
 git push -u origin master
 ```
-
-Créez le projet sur Github.com, en ne mettant PAS de Readme. Il vaut mieux l’ajouter après, une fois que les fichiers ont été uploader, pour éviter tout conflit.
-
-git remote add origin 
-
-leLienCopié va désigner le répertoire distant comme cible du projet.
-
 
 ## 3- Créer un fichier inventaire.yaml 
 
