@@ -151,7 +151,7 @@ On va ajouter le module manquant directement dans le playbook, c'est sa raison d
 Exécution de playbook
 
 ```
-ansible-playbook -i hosts.yaml deploy.yaml
+ansible-playbook -i inventaire.yaml deploy.yaml
 ```
 Ne connais pas PIP 
 On va installer PIP dans le playbook :
@@ -179,7 +179,7 @@ On va installer PIP dans le playbook :
 Exécution de playbook
 
 ```
-ansible-playbook -i hosts.yaml deploy.yaml
+ansible-playbook -i inventaire.yaml deploy.yaml
 ```
 
 Nouvelle erreur: Permision  denied
@@ -210,7 +210,7 @@ Nous n'avons pas les droits. Le compte deploy n'est pas suffisant. Il faut une �
 Exécution de playbook
 
 ```
-ansible-playbook -i hosts.yaml deploy.yaml
+ansible-playbook -i inventaire.yaml deploy.yaml
 ```
 Cette fois, "sudo: il est nécessaire de sais un mot de passe". 
 Nous allons y aller pour la façon la plus  simple bien sure, la moins sûr :
@@ -244,7 +244,7 @@ Nous allons y aller pour la façon la plus  simple bien sure, la moins sûr :
 Exécution de playbook
 
 ```
-ansible-playbook -i hosts.yaml deploy.yaml
+ansible-playbook -i inventaire.yaml deploy.yaml
 ```
 
 Résultat attendu : 
@@ -272,7 +272,7 @@ become_ask_pass=true
 Exécution de playbook
 
 ```
-ansible-playbook -i hosts.yaml deploy.yaml
+ansible-playbook -i inventaire.yaml deploy.yaml
 ```
 
 Le mot de passe est demandé.
@@ -294,7 +294,7 @@ Placer des captures des commandes suivantes et de la page du navigateur dans un 
 >[!Astuce] Utiser un terminal pour les deux commande cat et un autres pour l'éxécution de playbook et ce, côte à côte avec le navigateur en haut.
 
 ```bash
-cat hosts.yaml
+cat inventaire.yaml
 cat deploy.yaml
-ansible-playbook -i hosts.yaml deploy.yaml
+ansible-playbook -i inventaire.yaml deploy.yaml
 ```
