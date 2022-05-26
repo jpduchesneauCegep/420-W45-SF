@@ -159,7 +159,7 @@ ansible -m setup localhost > localhost.setup
 Utiliser le template suivant pour créer la seconde machine :
 
 - Allez dans le dossier :
-DFC DS -> VM DFC -> Modeles -> Production -> TPL_20210422_Ub2004Cli
+DFC DS -> VM DFC -> Modeles -> Production -> TPL_20220514_Ub2022CliBase
 - Sélectionnez le modèle de VM et cliquez sur le bouton droit de votre souris et sélectionnez Nouvelle VM à partir de ce modèle...
 - Suivez les étapes 
     - Nom de la VM : srv-apache-[matricule]
