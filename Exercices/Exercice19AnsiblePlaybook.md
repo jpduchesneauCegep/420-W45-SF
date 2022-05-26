@@ -79,7 +79,7 @@ all:
 
 ## 5- Créez un playbook nommé deloy.yaml
 
-Créez un playbook nommé dep---loy.yaml permettant de déployer Apache à l'aide de Docker sur le client (l'image à utiliser est httpd et le port à exposer à l'extérieur est le 80)
+Créez un playbook nommé deploy.yaml permettant de déployer Apache à l'aide de Docker sur le client (l'image à utiliser est httpd et le port à exposer à l'extérieur est le 80)
 ```Bash
 vi deploy.yaml
 ```
