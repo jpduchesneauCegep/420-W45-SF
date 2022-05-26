@@ -115,7 +115,7 @@ Lorsqu'il n'y a pas d'erreur, exécutez le playbook
 ```
 sudo apt update
 sudo apt install software-properties-common
-sudo apt-add-repository --yes --update ppa:Ansible/Ansible
+sudo add-apt-repository --yes --update ppa:Ansible/Ansible
 sudo apt install Ansible
 ```
 </details>
