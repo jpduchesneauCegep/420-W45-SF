@@ -286,6 +286,33 @@ vi ansible.cfg
 [privilege_escalation]
 become_ask_pass=true
 ```
+Retirez le mot de passe du fichier playbook :
+
+```yaml
+---
+- name: "Apache installation avec Docker"
+  hosts: prod
+  become: true
+  pre_tasks:
+    - name: "'Mise à jour"
+      apt:
+        update_cache: yes
+        ugrade: yes
+    - name: Install python-pip
+      apt:
+        name: python3-pip 
+        state: present 
+    - name: Install Docker python
+      pip: 
+        name: Docker-py
+  tasks:
+    - name : Create Apache container
+      docker_container:
+        name: webapp
+        image: httpd
+        ports:
+            - "80:80"
+```
 Exécution de playbook
 
 ```
