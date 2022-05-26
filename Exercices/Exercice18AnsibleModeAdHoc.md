@@ -91,8 +91,8 @@ Si nous avions fait une copie avec scp, quelle aurait été la situation ?
 Vous pouvez le tester : 
 
 ```bash
-vi toto.txt # Aujoutez le contenu
-scp toto.txt srv-apache-1:/home/deploy/toto.txt
+vi totot.txt # Aujoutez le contenu
+scp totot.txt srv-apache-1:/home/deploy/totot.txt
 ```
 Le fichier va écraser l'autre. Ansible lui voit que c'est le même contenu donc ne fait rien.
 
