@@ -89,6 +89,10 @@ vi deploy.yaml
 - name: "Apache installation avec Docker"
   hosts: prod
   tasks:
+    - name: "'Mise à jour"
+      apt:
+        uptdate_cache: yes
+        ugrade: yes
     - name: Create Apache container
       docker_container:
         name: webapp
@@ -137,6 +141,10 @@ On va ajouter le module manquant directement dans le playbook, c'est sa raison d
 - name: "Apache installation avec Docker"
   hosts: prod
   pre_tasks:
+    - name: "'Mise à jour"
+      apt:
+        uptdate_cache: yes
+        ugrade: yes
     - name: Install Docker python
       pip: 
         name: Docker-py
@@ -161,6 +169,10 @@ On va installer PIP dans le playbook :
 - name: Apache installation avec Docker
   hosts: prod
   pre_tasks:
+    - name: "'Mise à jour"
+      apt:
+        uptdate_cache: yes
+        ugrade: yes
     - name: Install python-pip
       apt: 
         name: python3-pip 
@@ -192,6 +204,10 @@ Nous n'avons pas les droits. Le compte deploy n'est pas suffisant. Il faut une �
   hosts: prod
   become: true  
   pre_tasks:
+    - name: "'Mise à jour"
+      apt:
+        uptdate_cache: yes
+        ugrade: yes
     - name: Install python-pip
       apt: 
         name: python3-pip 
@@ -223,8 +239,12 @@ Nous allons y aller pour la façon la plus  simple bien sure, la moins sûr :
   vars:
     ansible_sudo_pass: MotDePasse
   pre_tasks:
+    - name: "'Mise à jour"
+      apt:
+        uptdate_cache: yes
+        ugrade: yes
     - name: Install python-pip
-      apt
+      apt:
         name: python3-pip 
         state: present 
     - name: Install Docker python
