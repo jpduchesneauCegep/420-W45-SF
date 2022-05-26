@@ -160,7 +160,7 @@ On va installer PIP dans le playbook :
 ---
 - name: Apache installation avec Docker
   hosts: prod
-  pre_task:
+  pre_tasks:
     - name: Install python-pip
       apt: 
         name: python3-pip 
@@ -191,7 +191,7 @@ Nous n'avons pas les droits. Le compte deploy n'est pas suffisant. Il faut une �
 - name: Apache installation avec Docker
   hosts: prod
   become: true  
-  pre_task:
+  pre_tasks:
     - name: Install python-pip
       apt: 
         name: python3-pip 
@@ -222,7 +222,7 @@ Nous allons y aller pour la façon la plus  simple bien sure, la moins sûr :
   become: true
   vars:
     ansible_sudo_pass: MotDePasse
-  pre_task:
+  pre_tasks:
     - name: Install EPEP repo
       package: name=epel-release state=present
       when: ansible_distribution == "CentOS" # Ici ajout d'une condition
