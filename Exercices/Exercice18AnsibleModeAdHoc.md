@@ -80,7 +80,7 @@ cat toto.txt
 Exécutez à nouveau la commande :
 
 ```bash
-ansible -i inventaire Web -m copy -a "dest=/home/deploy/toto.txt content='Exercice Ansible ad hoc'"
+ansible -i inventaire Web -m copy -a "dest=/home/deploy/totot.txt content='Exercice Ansible ad hoc'"
 ```
 Remarquez les changements ( ou non-changement) au niveau changed:
 
