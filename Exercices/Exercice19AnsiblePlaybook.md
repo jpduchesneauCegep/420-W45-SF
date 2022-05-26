@@ -91,7 +91,7 @@ vi deploy.yaml
   tasks:
     - name: "'Mise à jour"
       apt:
-        uptdate_cache: yes
+        update_cache: yes
         ugrade: yes
     - name: Create Apache container
       docker_container:
@@ -143,7 +143,7 @@ On va ajouter le module manquant directement dans le playbook, c'est sa raison d
   pre_tasks:
     - name: "'Mise à jour"
       apt:
-        uptdate_cache: yes
+        update_cache: yes
         ugrade: yes
     - name: Install Docker python
       pip: 
@@ -171,7 +171,7 @@ On va installer PIP dans le playbook :
   pre_tasks:
     - name: "'Mise à jour"
       apt:
-        uptdate_cache: yes
+        update_cache: yes
         ugrade: yes
     - name: Install python-pip
       apt: 
@@ -206,7 +206,7 @@ Nous n'avons pas les droits. Le compte deploy n'est pas suffisant. Il faut une �
   pre_tasks:
     - name: "'Mise à jour"
       apt:
-        uptdate_cache: yes
+        update_cache: yes
         ugrade: yes
     - name: Install python-pip
       apt: 
@@ -241,7 +241,7 @@ Nous allons y aller pour la façon la plus  simple bien sure, la moins sûr :
   pre_tasks:
     - name: "'Mise à jour"
       apt:
-        uptdate_cache: yes
+        update_cache: yes
         ugrade: yes
     - name: Install python-pip
       apt:
