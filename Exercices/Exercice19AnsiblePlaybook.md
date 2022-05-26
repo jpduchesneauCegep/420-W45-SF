@@ -56,7 +56,7 @@ all:
 prod:
   hosts:
     client:
-       ansible_host: 10.0.1.4 # A remplacer par l'IP de votre client
+       ansible_host: 10.0.1.4 # A remplacer par l'IP de votre srv-apache
 ```
 
 Remarquez l'instruction ansible_host. Elle vous permet d'utiliser Ansible pour la résolution de nom plutôt que votre fichier  /etc/hosts.
