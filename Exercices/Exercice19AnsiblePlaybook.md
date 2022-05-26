@@ -198,7 +198,7 @@ Nous n'avons pas les droits. Le compte deploy n'est pas suffisant. Il faut une �
         state: present 
     - name: Install Docker python
       pip: 
-        name: Docker-py
+        name: docker-py
   tasks:
     - name : Create Apache container
       docker_container:
@@ -223,16 +223,13 @@ Nous allons y aller pour la façon la plus  simple bien sure, la moins sûr :
   vars:
     ansible_sudo_pass: MotDePasse
   pre_tasks:
-    - name: Install EPEP repo
-      package: name=epel-release state=present
-      when: ansible_distribution == "CentOS" # Ici ajout d'une condition
     - name: Install python-pip
-      yum: 
-        name=pyton-pip 
-        state=present 
-        update_cache=yes
+      apt
+        name: python-pip 
+        state: present 
     - name: Install Docker python
-      pip: name=docker-py
+      pip: 
+        name: Docker-py
   tasks:
     - name : Create Apache container
       docker_container:
