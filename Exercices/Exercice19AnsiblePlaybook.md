@@ -136,7 +136,7 @@ On va ajouter le module manquant directement dans le playbook, c'est sa raison d
 ---
 - name: "Apache installation avec Docker"
   hosts: prod
-  pre_task:
+  pre_tasks:
     - name: Install Docker python
       pip: 
         name=docker-py
