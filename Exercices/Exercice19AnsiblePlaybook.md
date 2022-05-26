@@ -139,7 +139,7 @@ On va ajouter le module manquant directement dans le playbook, c'est sa raison d
   pre_tasks:
     - name: Install Docker python
       pip: 
-        name=docker-py
+        name: Docker-py
   tasks:
     - name : Create Apache container
       docker_container:
@@ -198,7 +198,7 @@ Nous n'avons pas les droits. Le compte deploy n'est pas suffisant. Il faut une �
         state: present 
     - name: Install Docker python
       pip: 
-        name: docker-py
+        name: Docker-py
   tasks:
     - name : Create Apache container
       docker_container:
@@ -225,7 +225,7 @@ Nous allons y aller pour la façon la plus  simple bien sure, la moins sûr :
   pre_tasks:
     - name: Install python-pip
       apt
-        name: python-pip 
+        name: python3-pip 
         state: present 
     - name: Install Docker python
       pip: 
