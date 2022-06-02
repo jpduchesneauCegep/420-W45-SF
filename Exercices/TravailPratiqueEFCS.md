@@ -25,7 +25,7 @@ Nginx est utilisé comme équilibreur de charge pour avoir une structure comme c
 
 
 Donc, on se connecte sur www.efcs.com qui appelle le proxy nginx qui lui appelle en en alternance les serveurs 1 et 2. Chacun des serveurs est relié à un serveur php et à un serveur MySQL. 
--	Les deux serveurs web doivent être identiques, à part une information, dans la page Web, qui permet de distinguer le serveur 1 et le serveur 2, adresse Ip et Nom. 
+-	Les deux serveurs web doivent être identiques au niveau du code source. Par contre, nous devons pouvoir distinguer le serveur 1 et le serveur 2, adresse Ip et Nom lors de l'affichage de la page Web. 
 -	Les serveurs httpd et le serveur proxy seront reliés à un réseau avant.
 -	Les serveurs httpd auront chacun leur réseau arrière pour communiquer avec leurs serveurs php.
 -	Le contenu des serveurs httpd doit être monté par un point de montage à un répertoire de votre VM.
