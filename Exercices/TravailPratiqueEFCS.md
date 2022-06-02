@@ -73,8 +73,8 @@ Votre vidéo :
 |Item ||Points  |
 --- | --- | --- |
 |LoadBalancer ||
-||Définition des 2 serveurs|10|
-||Contexte serveur|10|
+||Définition des 2 serveurs|5|
+||Contexte serveur|5|
 |Serveur1/Serveur2 ||
 ||httpd|10
 ||php|10
@@ -83,6 +83,7 @@ Votre vidéo :
 |Commandes ||
 ||Ansible|10|
 ||Voir les logs |10|
+||Persistence des données |10|
 ||Arrêter et effacer tout|10|
 |Compréhension||10|
 |**Total** ||**100**|
