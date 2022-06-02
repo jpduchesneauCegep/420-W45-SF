@@ -46,6 +46,7 @@ Donc, on se connecte sur www.efcs.com qui appelle le proxy nginx qui lui appelle
 
 - LoadBalanceur
 - Web
+- Php
 - bd
 
 ### Votre déploiement :
