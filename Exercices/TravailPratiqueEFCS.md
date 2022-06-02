@@ -47,7 +47,7 @@ Donc, on se connecte sur www.efcs.com qui appelle le proxy nginx qui lui appelle
 - LoadBalanceur
 - Web
 - Php
-- bd
+- Bd
 
 ### Votre déploiement :
   - Se fait avec une seule commande et reproduit toute l'architecture.
@@ -76,10 +76,10 @@ Votre vidéo :
 ||Définition des 2 serveurs|5|
 ||Contexte serveur|5|
 |Serveur1/Serveur2 ||
-||httpd|10
-||php|10
-||Lien entre php et MySQL |10
-||Page Web d'identification |10
+||httpd|10|
+||php|10|
+||Lien entre php et MySQL |10|
+||Page Web personnlisé  |10|
 |Commandes ||
 ||Ansible|10|
 ||Voir les logs |10|
