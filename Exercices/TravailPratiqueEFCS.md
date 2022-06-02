@@ -24,7 +24,7 @@ Nginx est utilisé comme équilibreur de charge pour avoir une structure comme c
 ![Infra](img/EFCS.jpg)
 
 
-Donc, on se connecte sur www.efcs.com qui appelle le proxy nginx qui lui appelle en en alternance les serveurs 1 et 2. Chacun des serveurs est relié à un serveur php et à un serveur MySQL. 
+Donc, on se connecte sur www.efcs.com qui appelle le proxy Nginx qui lui appelle en en alternance les serveurs 1 et 2. Chacun des serveurs est relié à un serveur php et à un serveur MySQL. 
 -	Les deux serveurs web doivent être identiques au niveau du code source. Par contre, nous devons pouvoir distinguer le serveur 1 et le serveur 2, adresse Ip et Nom lors de l'affichage de la page Web. 
 -	Les serveurs httpd et le serveur proxy seront reliés à un réseau avant.
 -	Les serveurs httpd auront chacun leur réseau arrière pour communiquer avec leurs serveurs php.
@@ -66,7 +66,7 @@ Votre vidéo :
   - Une vidéo d'environ 8 min. (maximum 10 min.):
     -   Explication de tous vos fichiers
     -   Démonstration que le site fonctionne avec les deux serveurs.
-    -   Preuve de la persistance des données au niveau de la bd
+    -   Preuve de la persistance des données au niveau de la base de données.
     
 
 ## Évaluation :
@@ -79,11 +79,11 @@ Votre vidéo :
 ||httpd|5|
 ||php|5|
 ||Lien entre php et MySQL |5|
-||Page Web personnalisé  |10|
+||Page Web personnalisée  |10|
 |Commandes ||
 ||Ansible|10|
 ||Voir les logs |10|
-||Persistence des données |10|
+||Persistance des données |10|
 ||Arrêter et effacer tout|5|
 |Qualité de la présentation et compréhension||30|
 |**Total** ||**100**|
