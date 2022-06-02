@@ -21,7 +21,7 @@ Le but de cette épreuve à caractère synthèse a pour objectifs :
 
 Nginx est utilisé comme équilibreur de charge pour avoir une structure comme celle-ci :
 
-![Infra](/img/EFCS.jpg)
+![Infra](img/EFCS.jpg)
 
 
 Donc, on se connecte sur www.efcs.com qui appelle le proxy nginx qui lui appelle en en alternance les serveurs 1 et 2. Chacun des serveurs est relié à un serveur php et à un serveur MySQL. 
