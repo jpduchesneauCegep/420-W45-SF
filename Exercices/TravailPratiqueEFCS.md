@@ -76,14 +76,14 @@ Votre vidéo :
 ||Définition des 2 serveurs|5|
 ||Contexte serveur|5|
 |Serveur1/Serveur2 ||
-||httpd|10|
-||php|10|
-||Lien entre php et MySQL |10|
-||Page Web personnlisé  |10|
+||httpd|5|
+||php|5|
+||Lien entre php et MySQL |5|
+||Page Web personnalisé  |10|
 |Commandes ||
 ||Ansible|10|
 ||Voir les logs |10|
 ||Persistence des données |10|
-||Arrêter et effacer tout|10|
-|Compréhension||10|
+||Arrêter et effacer tout|5|
+|Compréhension||30|
 |**Total** ||**100**|
