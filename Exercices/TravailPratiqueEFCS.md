@@ -85,5 +85,5 @@ Votre vidéo :
 ||Voir les logs |10|
 ||Persistence des données |10|
 ||Arrêter et effacer tout|5|
-|Compréhension||30|
+|Qualité de la présentation et compréhension||30|
 |**Total** ||**100**|
