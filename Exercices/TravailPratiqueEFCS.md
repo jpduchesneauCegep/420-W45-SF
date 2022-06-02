@@ -30,9 +30,8 @@ Donc, on se connecte sur www.efcs.com qui appelle le proxy nginx qui lui appelle
 -	Les serveurs httpd auront chacun leur réseau arrière pour communiquer avec leurs serveurs php.
 -	Le contenu des serveurs httpd doit être monté par un point de montage à un répertoire de votre VM.
 -	Le serveur MYSQL doit avoir un volume de données persistant.
-
 -	Vous devrez démontrer le système fonctionnel.
-Attention : ne mettez pas de dépendance aux serveurs httpd.
+
 
 ## Ansible 
 
