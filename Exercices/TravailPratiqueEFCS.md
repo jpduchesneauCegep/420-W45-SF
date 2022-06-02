@@ -55,17 +55,19 @@ Donc, on se connecte sur www.efcs.com qui appelle le proxy nginx qui lui appelle
 ## Remise 
 Vous devez fournir (déposé sur LÉA) :
 
-- L'adresse de votre dépôt GitLab dans un fichier texte.
+- L'adresse de votre dépôt GitHub dans un fichier texte.
 
-Vous devez fournir (déposé sur GitLib) :
+Vous devez fournir (déposé sur GitHub) :
   - Un dépôt privé avec votre code source de l'EFCS.
   - Tous les fichiers de votre travail à l'exception de la vidéo.
   - Je dois trouver l'adresse de votre vidéo dans le fichier readme.md de votre projet.
 
 Votre vidéo :
   - Une vidéo d'environ 8 min. (maximum 10 min.):
-  -   Explication de tous vos fichiers
-  -   Démonstration que le site fonctionne avec les deux serveurs
+    -   Explication de tous vos fichiers
+    -   Démonstration que le site fonctionne avec les deux serveurs.
+    -   Preuve de la persistance des données au niveau de la bd
+    
 
 ## Évaluation :
 |Item ||Points  |
